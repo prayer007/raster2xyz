@@ -36,8 +36,9 @@ from raster2xyz.raster2xyz import Raster2xyz
 input_raster = "input_raster.tif"
 out_csv = "/tmp/out_xyz.csv"
 
+# Set out_xyz to None if the result should be returned. Else set a path.
 rtxyz = Raster2xyz()
-rtxyz.translate(input_raster, out_csv)
+dataframe = rtxyz.translate(input_raster, out_xyz = None)
 ```
 ## Requirements
 - Numpy: http://www.numpy.org/
